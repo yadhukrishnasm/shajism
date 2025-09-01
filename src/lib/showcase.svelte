@@ -3,13 +3,13 @@
 	import { goto } from '$app/navigation';
 	const cardCount = 7;
 	const images = [
-		'/images/12.jpg',
-		'/images/13.jpg',
-		'/images/14.jpg',
-		'/images/15.jpg',
-		'/images/16.jpg',
-		'/images/19.jpg',
-		'/images/21.jpg'
+		'/images/20',
+		'/images/21',
+		'/images/15',
+		'/images/4',
+		'/images/28',
+		'/images/8',
+		'/images/13',
 	];
 
 	onMount(async () => {
@@ -58,13 +58,13 @@
 
 <div id="showcaseContainer" class="px- pt-20 md:space-y-6 md:p-20">
 	<div id="heading" class="text-center">
-		<p class="font-instrument text-center text-3xl md:text-6xl" style="letter-spacing: 1px;">
-			A Place To Display Your <br /> Masterpiece
+		<p class="font-kalnia text-center text-3xl md:text-3xl" style="letter-spacing: 1px;">
+			My artworks
 		</p>
 	</div>
 	<div id="Cards-container" class="relative flex h-48 items-center justify-center md:h-[40vh]">
 		{#each Array(cardCount) as _, i}
-			<div class="card absolute h-28 w-28 border bg-white md:h-48 md:w-48">
+			<div class="card absolute h-20 w-20  bg-white md:h-56 md:w-56">
 				<img
 					src={images[i]}
 					alt="Artwork {i + 1}"
@@ -80,7 +80,7 @@
 	<div id="subheading" class="mt-15 flex flex-col space-y-2 text-center md:mt-0 md:block">
 		<button
 			class="m-3 rounded-full border bg-red-500 px-4 py-2 text-white md:mr-7"
-			on:click={handleLogin}>Login/Register</button
+			on:click={handleLogin}>Contact me</button
 		>
 		<button class="underline">Read more</button>
 	</div>

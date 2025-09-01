@@ -16,26 +16,15 @@
 			scroller: '#smooth-content'
 		});
 
-		// About section (black background)
 		ScrollTrigger.create({
-			trigger: '#about',
-			start: 'top 40%',
-			end: 'bottom 40%',
-			scroller: '#smooth-content',
-			onEnter: () => gsap.to('#navbar', { color: '#fff', duration: 0.2 }),
-			onLeaveBack: () => gsap.to('#navbar', { color: '#000', duration: 0.2 }),
-			onLeave: () => gsap.to('#navbar', { color: '#000', duration: 0.2 }),
-			onEnterBack: () => gsap.to('#navbar', { color: '#fff', duration: 0.2 })
-		});
-
-		// Footer section (black background)
-		ScrollTrigger.create({
-			trigger: '#footer',
-			start: 'top 60%',
-			end: 'bottom 100%',
-			scroller: '#smooth-content',
-			onEnter: () => gsap.to('#navbar', { color: '#fff', duration: 0.2 }),
-			onLeaveBack: () => gsap.to('#navbar', { color: '#000', duration: 0.2 })
+			trigger: '#hero',
+			start: 'bottom center',
+			onEnter: () => {
+				gsap.to('#navbar', { y: 0, opacity: 1, duration: 0.4 });
+			},
+			onLeaveBack: () => {
+				gsap.to('#navbar', { y: -100, opacity: 0, duration: 0.4, ease: 'power2.in' });
+			}
 		});
 	});
 
@@ -48,13 +37,13 @@
 </script>
 
 <div id="smooth-wrapper">
-	<button id="navbar" type="button" class=" font-libre text-lg" on:click={scrollToHero}
-		>CHITHRAM</button
+	<button id="navbar" type="button" class="font-windsong text-2xl" on:click={scrollToHero}
+		>Shaji S M</button
 	>
 	<div id="smooth-content">
 		<div class="page text-2xl text-black" id="hero"><Hero /></div>
-		<div class="page" id="about"><About /></div>
 		<div class="page" id="showcase"><Showcase /></div>
+		<div class="page" id="about"><About /></div>
 		<div class="page p-4" id="footer"><Footer /></div>
 	</div>
 </div>
@@ -68,7 +57,7 @@
 		scroll-snap-align: start;
 	}
 	#smooth-wrapper {
-		background-color: #f9eae1;
+		background-color: #f9f9f9;
 	}
 
 	#smooth-content {
@@ -84,17 +73,20 @@
 		width: 100vw;
 		height: 80px;
 		display: flex;
+
 		&:hover {
 			text-decoration: underline;
 		}
 		transition: all 1s ease-in-out;
 		font-weight: 500;
-		padding-left: 5em;
+		padding-left: 2em;
 		align-items: center;
 		z-index: 1000;
 		color: #000000;
 		transition: color 0.2s;
 		border: none;
+		transform: translateY(-100);
+		opacity: 0;
 		cursor: pointer;
 	}
 	@media (max-width: 640px) {

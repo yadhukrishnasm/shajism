@@ -37,7 +37,7 @@
 });
 </script>
 
-<div class="about-container relative md:grid md:grid-cols-2 text-white bg-black">
+<div class="about-container relative md:grid md:grid-cols-2 ">
     <div class="absolute">
         <img src="/svg/taj.svg" class="h-60 m-20 hidden md:block" alt="">
     </div>
