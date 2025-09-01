@@ -58,8 +58,8 @@
 
 <div id="showcaseContainer" class="px- pt-20 md:space-y-6 md:p-20">
 	<div id="heading" class="text-center">
-		<p class="font-kalnia text-center text-3xl md:text-3xl" style="letter-spacing: 1px;">
-			My artworks
+		<p class="font-kalnia text-center text-3xl md:text-6xl" style="letter-spacing: 1px;">
+			My Artworks
 		</p>
 	</div>
 	<div id="Cards-container" class="relative flex h-48 items-center justify-center md:h-[40vh]">
