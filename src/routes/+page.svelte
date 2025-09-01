@@ -26,6 +26,16 @@
 				gsap.to('#navbar', { y: -100, opacity: 0, duration: 0.4, ease: 'power2.in' });
 			}
 		});
+		ScrollTrigger.create({
+			trigger: '#footer',
+			start: 'top center',
+			onEnter: () => {
+				gsap.to('#navbar', { y: -100, opacity: 0, duration: 0.4 });
+			},
+			onLeaveBack: () => {
+				gsap.to('#navbar', { y: 0, opacity: 1, duration: 0.4,  });
+			}
+		});
 	});
 
 	function scrollToHero() {
@@ -44,7 +54,7 @@
 		<div class="page text-2xl text-black" id="hero"><Hero /></div>
 		<div class="page" id="showcase"><Showcase /></div>
 		<div class="page" id="about"><About /></div>
-		<div class="page p-4" id="footer"><Footer /></div>
+		<div class="page" id="footer"><Footer /></div>
 	</div>
 </div>
 
@@ -79,7 +89,7 @@
 		}
 		transition: all 1s ease-in-out;
 		font-weight: 500;
-		padding-left: 2em;
+		padding-left: 1.5em;
 		align-items: center;
 		z-index: 1000;
 		color: #000000;

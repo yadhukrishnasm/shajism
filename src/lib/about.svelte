@@ -23,7 +23,7 @@
 				onComplete: () => {
 					current = next;
 					tick().then(() => {
-						gsap.fromTo(imgEl, { opacity: 0 }, { opacity: 1, duration: 5 });
+						gsap.fromTo(imgEl, { opacity: 0 }, { opacity: 1, duration: 1 });
 					});
 				}
 			});
